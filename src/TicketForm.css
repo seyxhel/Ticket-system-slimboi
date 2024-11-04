@@ -1,0 +1,108 @@
+.ticket-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.ticket-form:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-form h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Balanced spacing between fields */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+  font-size: 16px;
+}
+
+.form-input {
+  width: 200%; /* Full width of the parent container */
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f8f8f8;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Light shadow inside */
+}
+
+.form-input:focus {
+  border-color: #7cce38;
+  box-shadow: 0 0 8px rgba(0, 150, 136, 0.1); /* Add soft glow effect */
+  background-color: #fff;
+}
+
+textarea.form-input {
+  resize: vertical;
+  height: 120px; /* Adjusted default height */
+  width: 500px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.submit-button-primary {
+  padding: 12px 25px;
+  background-color: #0f0a6d;
+  color: white;
+  border: none;
+  border-radius: 34px;
+  cursor: pointer;
+  font-size: 23px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  margin: 20px auto 0;
+  width: 70%; /* Full width button */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.button-primary:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.button-primary:hover:not(:disabled) {
+  background-color: #00796b;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More defined hover shadow */
+}
+
+.button-primary:active {
+  background-color: #00695c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly reduced shadow */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .ticket-form {
+    padding: 20px;
+  }
+
+  .ticket-form h2 {
+    font-size: 24px;
+  }
+
+  .button-primary {
+    width: 100%; /* Ensures button takes up full width on mobile */
+  }
+}

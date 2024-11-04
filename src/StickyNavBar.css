@@ -1,0 +1,80 @@
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  background-color: #333;
+  color: white;
+  padding: 20px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left */
+  flex-grow: 1; /* Ensure buttons take up available space */
+  gap: 10px; /* Space between buttons */
+  align-items: center; /* Align buttons vertically */
+}
+
+.nav-btn {
+  background-color: #28a591;
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Adjusted padding for better button size */
+  border-radius: 10000px;
+  cursor: pointer;
+  font-size: 1em;
+  height: 50px;
+  min-width: 100px; /* Ensures consistent button width */
+  display: inline-flex; /* Ensure buttons remain inline */
+  justify-content: center; /* Center the button text */
+  align-items: center;
+  
+  /* Control the position on x and y axis */
+  margin: 10px 20px; /* Adjust margins to control spacing along x (horizontal) and y (vertical) */
+  transform: translate(0px, 0px); /* Default transform, adjust values to move button on the x (horizontal) or y (vertical) axis */
+  
+  /* Optional: You can even animate the transform for smooth movement */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover state for button to slightly move on the y-axis for effect */
+.nav-btn:hover {
+  background-color: #0056b3;
+  transform: translate(0px, -5px); /* Moves the button up by 5px on hover */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout-btn {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 100px;
+  align-items: center; /* Consistent width with other buttons */
+}
+
+.logout-btn:hover {
+  background-color: #c9302c;
+}
+
+/* Ensuring all buttons align properly on smaller screens */
+@media (max-width: 768px) {
+  .nav-buttons {
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  }
+
+  .nav-btn, .logout-btn {
+    width: 100%; /* Make buttons full width on smaller screens */
+  }
+}
